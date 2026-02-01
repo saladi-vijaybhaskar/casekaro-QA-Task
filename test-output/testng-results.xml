@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-02-01T19:48:54 IST" name="Default suite" finished-at="2026-02-01T19:49:28 IST" duration-ms="33701">
+    <groups>
+    </groups>
+    <test started-at="2026-02-01T19:48:54 IST" name="Default test" finished-at="2026-02-01T19:49:28 IST" duration-ms="33701">
+      <class name="tests.HomePageTest">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.HomePageTest@3c19aaa5]" started-at="2026-02-01T19:48:54 IST" name="setUp" finished-at="2026-02-01T19:49:03 IST" duration-ms="8363" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.HomePageTest.test()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test()[pri:0, instance:tests.HomePageTest@3c19aaa5]" started-at="2026-02-01T19:49:03 IST" name="test" finished-at="2026-02-01T19:49:27 IST" duration-ms="24512" status="FAIL">
+          <exception class="org.opentest4j.AssertionFailedError">
+            <message>
+              <![CDATA[Locator expected to contain text
+Error: strict mode violation: locator(".cart-item") resolved to 3 elements:
+    1) <tr role="row" class="cart-item" id="CartDrawer-Item-1">…</tr> aka getByRole(AriaRole.ROW, new Page.GetByRoleOptions().setName("BMW Stripes Pattern iPhone 16 Pro Glass Case Back Cover by Casekaro BMW Stripes"))
+    2) <tr role="row" class="cart-item" id="CartDrawer-Item-2">…</tr> aka getByRole(AriaRole.ROW, new Page.GetByRoleOptions().setName("BMW Stripes Pattern iPhone 16 Pro Soft Case Back Cover by Casekaro BMW Stripes"))
+    3) <tr role="row" class="cart-item" id="CartDrawer-Item-3">…</tr> aka getByRole(AriaRole.ROW, new Page.GetByRoleOptions().setName("BMW Stripes Pattern iPhone 16 Pro Hard Case Back Cover by Casekaro BMW Stripes"))
+
+Expected: BMW Stripes Pattern
+Received: null
+
+Call log:
+  - Assert "containsText" with timeout 5000ms
+  - waiting for locator(".cart-item")]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.opentest4j.AssertionFailedError: Locator expected to contain text
+Error: strict mode violation: locator(".cart-item") resolved to 3 elements:
+    1) <tr role="row" class="cart-item" id="CartDrawer-Item-1">…</tr> aka getByRole(AriaRole.ROW, new Page.GetByRoleOptions().setName("BMW Stripes Pattern iPhone 16 Pro Glass Case Back Cover by Casekaro BMW Stripes"))
+    2) <tr role="row" class="cart-item" id="CartDrawer-Item-2">…</tr> aka getByRole(AriaRole.ROW, new Page.GetByRoleOptions().setName("BMW Stripes Pattern iPhone 16 Pro Soft Case Back Cover by Casekaro BMW Stripes"))
+    3) <tr role="row" class="cart-item" id="CartDrawer-Item-3">…</tr> aka getByRole(AriaRole.ROW, new Page.GetByRoleOptions().setName("BMW Stripes Pattern iPhone 16 Pro Hard Case Back Cover by Casekaro BMW Stripes"))
+
+Expected: BMW Stripes Pattern
+Received: null
+
+Call log:
+  - Assert "containsText" with timeout 5000ms
+  - waiting for locator(".cart-item")
+at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:74)
+at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:47)
+at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:39)
+at com.microsoft.playwright.impl.LocatorAssertionsImpl.containsText(LocatorAssertionsImpl.java:75)
+at com.microsoft.playwright.assertions.LocatorAssertions.containsText(LocatorAssertions.java:1008)
+at pages.CartPage.validateItems(CartPage.java:25)
+at tests.HomePageTest.test(HomePageTest.java:56)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.opentest4j.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.HomePageTest@3c19aaa5]" started-at="2026-02-01T19:49:27 IST" name="tearDown" finished-at="2026-02-01T19:49:28 IST" duration-ms="780" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test status=FAILURE method=HomePageTest.test()[pri:0, instance:tests.HomePageTest@3c19aaa5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HomePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
